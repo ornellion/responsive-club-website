@@ -1,0 +1,182 @@
+body {
+    background-color: #121715ff;
+    color: #fceeeeff;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100%;
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 500px auto 500px auto;
+    grid-template-areas: 
+        "navigation navigation"
+        "header header"
+        "description description"
+        "how-it-works how-it-works"
+        "sign-up sign-up";
+}
+
+a {
+    color: #fceeeeff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #121715ff;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.875rem;
+}
+
+.large-text {
+    font-size: 1.563rem;
+    font-weight: 300;
+}
+
+/* Navigation */
+
+.navigation {
+    grid-area: navigation;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    background-color: #b82840ff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .navigation {
+        flex-direction: column;
+    }
+}
+
+/* Header */
+
+.header {
+    grid-area: header;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Resources/cinemaseats.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-text {
+    margin: 1rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 1rem;
+    width: 50%;
+}
+
+.header-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .header-text {
+        text-align: center;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+}
+
+/* Description */
+
+.description {
+    grid-area: description;
+    text-align: center;
+    padding: 150px 2rem;
+}
+
+/* How It Works */
+
+.how-it-works {
+    grid-area: how-it-works;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.works-image {
+    max-height: 500px;
+}
+
+.works-image img {
+    height: 500px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.works-description {
+    align-self: center;
+    max-width: 50%;
+    padding: 1rem;
+    line-height: 1.4;
+}
+
+.works-description p {
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .works-description {
+        text-align: center;
+        max-width: 100%;
+        border-top: 1px solid #fceeeeff;
+        border-bottom: 1px solid #fceeeeff;
+        padding: 4rem 1rem;
+    }
+
+    .works-image {
+        display: none;
+    }
+}
+
+
+/* Sign Up */
+
+.sign-up {
+    grid-area: sign-up;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+#sign-up-form {
+    width: 50%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+}
+
+#sign-up-button {
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: #b82840ff;
+    color: #fceeeeff;
+    border: none;
+}
